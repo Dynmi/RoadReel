@@ -3,6 +3,7 @@ import AVKit
 import AppKit
 import Combine
 
+
 enum TeslaClipCategory: String, CaseIterable, Identifiable {
     case recent = "RecentClips"
     case saved = "SavedClips"
