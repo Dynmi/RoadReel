@@ -2,6 +2,10 @@
 
 RoadReel is a new open-source macOS viewer for TeslaCam recordings. It combines six synchronized camera views with thumbnails, event-aware navigation, full-screen playback, clip export, and recoverable deletion in a polished bilingual interface.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Dynmi/RoadReel/main/docs/roadreel-overview.png" width="820" alt="RoadReel main interface showing TeslaCam event browsing and six synchronized camera views">
+</p>
+
 ## Download
 
 - `RoadReel-1.0.0.dmg` — recommended installer image
@@ -18,6 +22,8 @@ If macOS blocks RoadReel, open **System Settings → Privacy & Security**, scrol
 
 如果 macOS 拦截 RoadReel，请打开 **系统设置 → 隐私与安全性**，滚动到“安全性”，然后点击 RoadReel 提示旁的 **仍要打开（Open Anyway）**。
 
-![Allow RoadReel in macOS Privacy & Security](https://raw.githubusercontent.com/Dynmi/RoadReel/main/docs/open-anyway.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Dynmi/RoadReel/main/docs/open-anyway.png" width="620" alt="Allow RoadReel in macOS Privacy & Security">
+</p>
 
 RoadReel is independent software and is not affiliated with Tesla, Inc.
