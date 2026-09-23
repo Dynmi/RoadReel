@@ -229,6 +229,29 @@ enum TeslaExportError: LocalizedError {
     }
 }
 
+private func exportAsset(
+    _ exporter: AVAssetExportSession,
+    to destinationURL: URL
+) async throws {
+    exporter.outputURL = destinationURL
+    exporter.outputFileType = .mp4
+
+    try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
+        exporter.exportAsynchronously {
+            switch exporter.status {
+            case .completed:
+                continuation.resume()
+            case .cancelled:
+                continuation.resume(throwing: CancellationError())
+            case .failed:
+                continuation.resume(throwing: exporter.error ?? TeslaExportError.unavailable)
+            default:
+                continuation.resume(throwing: exporter.error ?? TeslaExportError.unavailable)
+            }
+        }
+    }
+}
+
 enum TeslaDeleteError: LocalizedError {
     case noFiles
     case incomplete
@@ -457,16 +480,6 @@ final class TeslaCamViewModel: ObservableObject {
     private var isScrubbing = false
     private var lastDriftCorrectionSecond = -1
     private var securityScopedURL: URL?
-
-    isolated deinit {
-        if let periodicTimeObserver, let player = timeObserverPlayer {
-            player.removeTimeObserver(periodicTimeObserver)
-        }
-        if let playbackEndedObserver {
-            NotificationCenter.default.removeObserver(playbackEndedObserver)
-        }
-        securityScopedURL?.stopAccessingSecurityScopedResource()
-    }
 
     var safeDuration: Double {
         duration.isFinite && duration > 0 ? duration : 0
@@ -878,7 +891,7 @@ final class TeslaCamViewModel: ObservableObject {
                     throw TeslaExportError.cannotCreateExporter
                 }
                 if let exportRange { exporter.timeRange = exportRange }
-                try await exporter.export(to: destinationURL, as: .mp4)
+                try await exportAsset(exporter, to: destinationURL)
 
                 guard let self else { return }
                 self.isExporting = false
@@ -970,6 +983,8 @@ final class TeslaCamViewModel: ObservableObject {
         scanTask?.cancel()
         playbackTask?.cancel()
         releaseSession()
+        securityScopedURL?.stopAccessingSecurityScopedResource()
+        securityScopedURL = nil
     }
 
     private func exportFilename(camera: TeslaCamera, mode: TeslaExportMode) -> String {
