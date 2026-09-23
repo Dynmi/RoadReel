@@ -14,4 +14,10 @@ Requires macOS 14 or later. Both Apple silicon and Intel Macs are supported.
 
 This community build is ad-hoc signed and is not Apple-notarized. After copying RoadReel to Applications, Control-click it and choose **Open**. If needed, approve it under **System Settings → Privacy & Security**.
 
+If macOS blocks RoadReel, open **System Settings → Privacy & Security**, scroll to **Security**, and click **Open Anyway** next to the RoadReel message.
+
+如果 macOS 拦截 RoadReel，请打开 **系统设置 → 隐私与安全性**，滚动到“安全性”，然后点击 RoadReel 提示旁的 **仍要打开（Open Anyway）**。
+
+![Allow RoadReel in macOS Privacy & Security](https://raw.githubusercontent.com/Dynmi/RoadReel/main/docs/open-anyway.png)
+
 RoadReel is independent software and is not affiliated with Tesla, Inc.
