@@ -1,0 +1,12 @@
+.DS_Store
+DerivedData/
+build/
+release/
+*.xcarchive
+*.dmg
+*.zip
+*.sha256
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint

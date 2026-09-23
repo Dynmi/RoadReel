@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		576B70852F5AD1EA008A4DCC /* TeslaCamPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaCamPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		576B70852F5AD1EA008A4DCC /* RoadReel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadReel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		576B70872F5AD1EA008A4DCC /* TeslaCamPro */ = {
+		576B70872F5AD1EA008A4DCC /* RoadReel */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TeslaCamPro;
+			path = RoadReel;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		576B707C2F5AD1EA008A4DCC = {
 			isa = PBXGroup;
 			children = (
-				576B70872F5AD1EA008A4DCC /* TeslaCamPro */,
+				576B70872F5AD1EA008A4DCC /* RoadReel */,
 				576B70862F5AD1EA008A4DCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		576B70862F5AD1EA008A4DCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				576B70852F5AD1EA008A4DCC /* TeslaCamPro.app */,
+				576B70852F5AD1EA008A4DCC /* RoadReel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		576B70842F5AD1EA008A4DCC /* TeslaCamPro */ = {
+		576B70842F5AD1EA008A4DCC /* RoadReel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 576B70902F5AD1EB008A4DCC /* Build configuration list for PBXNativeTarget "TeslaCamPro" */;
+			buildConfigurationList = 576B70902F5AD1EB008A4DCC /* Build configuration list for PBXNativeTarget "RoadReel" */;
 			buildPhases = (
 				576B70812F5AD1EA008A4DCC /* Sources */,
 				576B70822F5AD1EA008A4DCC /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				576B70872F5AD1EA008A4DCC /* TeslaCamPro */,
+				576B70872F5AD1EA008A4DCC /* RoadReel */,
 			);
-			name = TeslaCamPro;
+			name = RoadReel;
 			packageProductDependencies = (
 			);
-			productName = TeslaCamPro;
-			productReference = 576B70852F5AD1EA008A4DCC /* TeslaCamPro.app */;
+			productName = RoadReel;
+			productReference = 576B70852F5AD1EA008A4DCC /* RoadReel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 576B70802F5AD1EA008A4DCC /* Build configuration list for PBXProject "TeslaCamPro" */;
+			buildConfigurationList = 576B70802F5AD1EA008A4DCC /* Build configuration list for PBXProject "RoadReel" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				576B70842F5AD1EA008A4DCC /* TeslaCamPro */,
+				576B70842F5AD1EA008A4DCC /* RoadReel */,
 			);
 		};
 /* End PBXProject section */
@@ -178,7 +178,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -235,7 +235,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -250,23 +250,25 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CODE_SIGN_ENTITLEMENTS = RoadReel/RoadReel.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_CFBundleDisplayName = RoadReel;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Dynmi. Released under the MIT License.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dynmi.TeslaCamPro;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.Dynmi.RoadReel;
+				PRODUCT_NAME = RoadReel;
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -280,23 +282,25 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CODE_SIGN_ENTITLEMENTS = RoadReel/RoadReel.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_CFBundleDisplayName = RoadReel;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Dynmi. Released under the MIT License.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dynmi.TeslaCamPro;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.Dynmi.RoadReel;
+				PRODUCT_NAME = RoadReel;
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -306,7 +310,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		576B70802F5AD1EA008A4DCC /* Build configuration list for PBXProject "TeslaCamPro" */ = {
+		576B70802F5AD1EA008A4DCC /* Build configuration list for PBXProject "RoadReel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				576B708E2F5AD1EB008A4DCC /* Debug */,
@@ -315,7 +319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		576B70902F5AD1EB008A4DCC /* Build configuration list for PBXNativeTarget "TeslaCamPro" */ = {
+		576B70902F5AD1EB008A4DCC /* Build configuration list for PBXNativeTarget "RoadReel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				576B70912F5AD1EB008A4DCC /* Debug */,
