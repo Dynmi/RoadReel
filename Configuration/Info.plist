@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>SUFeedURL</key>
+    <string>https://github.com/Dynmi/RoadReel/releases/latest/download/appcast.xml</string>
+    <key>SUPublicEDKey</key>
+    <string>iTtSx5WQcBLWA3wkWS2OLx0s6wBS0Jnea3Y844HdHZE=</string>
+    <key>SUEnableInstallerLauncherService</key>
+    <true/>
+    <key>SUEnableAutomaticChecks</key>
+    <true/>
+    <key>SUScheduledCheckInterval</key>
+    <integer>21600</integer>
+    <key>SUAutomaticallyUpdate</key>
+    <false/>
+    <key>SUEnableSystemProfiling</key>
+    <false/>
+    <key>SUShowReleaseNotes</key>
+    <false/>
+    <key>SUVerifyUpdateBeforeExtraction</key>
+    <true/>
+    <key>SURequireSignedFeed</key>
+    <true/>
+</dict>
+</plist>
